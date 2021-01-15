@@ -1,20 +1,8 @@
-def to_lower_base (number, base)
-  converted_number = []
-	loop do
-		if number < base
-      converted_number << number
-      break
-		else
-			digit = number % base
-			converted_number << digit
-			number = number / base
-		end
-	end
-	return converted_number.reverse.join
-end
+# convert decimal to bases
 
-def to_higher_base (number, base)
-  converted_number = []
-
-
+def decimal_to_base (decimal, base)
+  # this is to get the chars for the numbers larger than 9
+  chars = ('A'..'Z').to_a
+  converted_array = decimal.digits(base).reverse
+  result_string = converted_array.map{|digit| digit >=9 ? (chars[digit-10]) : digit}.join
 end
