@@ -1,13 +1,19 @@
 require_relative("../converter.rb")
 
-describe "Convert higher to a lower base" do
-	it "when decimal number given" do
+describe "Convert decimal to a lower base" do
+	it "converts decimal to binary" do
 		expect(to_lower_base(10, 2)).to eq("1010")
+  end
+  it "converts to base 5" do
+		expect(to_lower_base(344, 5)).to eq("2334")
+  end
+  it "converts to base 9" do
+		expect(to_lower_base(344, 9)).to eq("422")
 	end
-	it "when 1 is given" do
+	it "converts 1 to lower bases" do
 		expect(to_lower_base(1, 2)).to eq("1")
 	end
-	it "when 0 is given" do
+	it "converts 0 to lower bases" do
 		expect(to_lower_base(0, 2)).to eq("0")
 	end
 end
