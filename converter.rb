@@ -2,7 +2,7 @@ def to_lower_base (number, base)
   converted_number = []
 	loop do
 		if number < base
-      converted_number < number
+      converted_number << number
       break
 		else
 			digit = number % base
@@ -15,6 +15,6 @@ end
 
 def to_higher_base (number, base)
   converted_number = []
-  
+
 
 end
