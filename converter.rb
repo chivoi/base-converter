@@ -1,10 +1,12 @@
-def decimal_to_base (decimal, base)
-  # get converted number as a string
-  converted = decimal.to_i.to_s(base.to_i)
-  # capitalize alphabetic characters
-  converted.chars.map{|char| char.capitalize}.join
-end
+require_relative './lib/methods'
 
-def base_to_decimal (number, base)
-  number.to_i(base.to_i)
-end
+puts "Enter a number to convert"
+number = gets.strip
+puts "Enter a base the number is in"
+current_base = gets.strip
+puts "Enter a base to convert the number to"
+new_base = gets.strip
+
+answer = base_to_base(number, current_base, new_base)
+
+puts "The answer is #{answer}"
